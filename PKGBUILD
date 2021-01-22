@@ -1,7 +1,7 @@
 # Maintainer: Nick Østergaard <oe.nick at gmail dot com>
 
 pkgname=kicad-git
-pkgver=5.99.0.r6895.gbd63c018c9
+pkgver=5.99.0.r8543.g42cbcf7ef4
 pkgrel=1
 pkgdesc="Electronic schematic and printed circuit board (PCB) design tools"
 arch=('i686' 'x86_64')
@@ -11,9 +11,9 @@ depends=('glew' 'wxgtk3' 'desktop-file-utils' 'boost-libs' 'python'
          'glm' 'curl' 'swig' 'python-wxpython' 'opencascade' 'ngspice>=27')
 makedepends=('cmake' 'git' 'zlib' 'mesa' 'boost')
 optdepends=('kicad-library: for footprints')
-conflicts=('kicad' 'kicad-bzr')
-provides=('kicad')
-install=kicad.install
+conflicts=()
+provides=('kicad-git')
+#install=kicad.install
 source=("${pkgname}"'::git+https://gitlab.com/kicad/code/kicad.git')
 md5sums=('SKIP')
 
@@ -41,11 +41,11 @@ build() {
     -DCMAKE_EXE_LINKER_FLAGS=-fuse-ld=gold \
     -DKICAD_SCRIPTING_WXPYTHON_PHOENIX=ON
 
-  make
+  make -j24
 }
 
 package() {
   cd "${srcdir}/${pkgname}"
   cd build
-  make DESTDIR="${pkgdir}" install
+  make DESTDIR="${pkgdir}/opt/kicad599" install
 }
