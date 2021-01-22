@@ -6,7 +6,7 @@ with existing KiCad installations.
 To build:
 
 - clone this repo
-- `arch-aur-kicad-git`
+- `cd arch-aur-kicad-git`
 - `makepkg`
 - can inspect resulting package
 - `sudo pacman -U kicad-git-5.99.0...zst`
