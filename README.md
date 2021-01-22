@@ -11,7 +11,7 @@ To build:
 - can inspect resulting package
 - `sudo pacman -U kicad-git-5.99.0...zst`
 
-Alternatively, you can download snapshots from:
+Alternatively, you can download pre-built snapshots from:
 
 http://bec-systems.com/kicad599/
 
