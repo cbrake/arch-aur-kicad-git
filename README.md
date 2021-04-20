@@ -1,3 +1,13 @@
+# THIS REPO IS OBSOLETE
+
+For the Kicad 5.999 builds, recocommend using the following instead:
+
+- https://aur.archlinux.org/packages/kicad-nightly/
+- https://aur.archlinux.org/packages/kicad-library-nightly/
+- https://aur.archlinux.org/packages/kicad-library-3d-nightly/
+
+# Old info
+
 This recipe is a fork of: https://aur.archlinux.org/packages/kicad-git/
 
 to allow us to build kicad to install into /opt/kicad599 and run in parallel
